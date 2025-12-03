@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import TQueryProvider from "./dashboard/TQueryProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,8 +31,10 @@ export default function RootLayout({
       >
         {" "}
         <div className="container bg-gray-50 max-w-4xl mx-auto  px-2">
-          <div className="p p-3 text-center text-xl border-b ">Stocks</div>
-          {children}
+          <TQueryProvider>
+            <Navbar />
+            {children}
+          </TQueryProvider>
         </div>
       </body>
     </html>
