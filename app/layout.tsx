@@ -27,7 +27,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        {" "}
+        <div className="container bg-gray-50 max-w-4xl mx-auto  px-2">
+          <div className="p p-3 text-center text-xl border-b ">Stocks</div>
+          {children}
+        </div>
       </body>
     </html>
   );
