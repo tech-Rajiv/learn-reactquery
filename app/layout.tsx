@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {" "}
-        <div className="container bg-gray-50 max-w-4xl mx-auto  px-2">
+        <div className="container bg-gray-50 max-w-4xl mx-auto ">
           <TQueryProvider>
             <Navbar />
             {children}

@@ -2,7 +2,7 @@ import StockWithPrice from "./components/StockWithPrice";
 
 function page() {
   return (
-    <div className="py-5">
+    <div className="p-5">
       <StockWithPrice />
     </div>
   );

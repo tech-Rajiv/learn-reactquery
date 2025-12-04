@@ -1,3 +1,7 @@
 export const getRsFromUsd = (usd: number) => {
-  return (usd * 89).toFixed(2).toLocaleString();
+  const rs = usd * 89;
+  return rs.toLocaleString("en-IN", {
+    maximumFractionDigits: 5,
+    minimumFractionDigits: 2,
+  });
 };
