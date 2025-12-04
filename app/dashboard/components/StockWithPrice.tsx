@@ -9,7 +9,7 @@ async function fetchCoins() {
   const res = await fetch(
     "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd",
     {
-      cache: "no-cache",
+      cache: "no-store",
     }
   );
   return res.json();
@@ -21,6 +21,7 @@ function StockWithPrice() {
     queryFn: fetchCoins,
     refetchInterval: 10000,
     staleTime: 10000,
+    refetchIntervalInBackground: false, // 🚫 no background polling
   });
   const [visibleCount, setVisibleCount] = useState(5);
   const [inifinteLoding, setInfineLoading] = useState(false);
@@ -51,7 +52,6 @@ function StockWithPrice() {
   useEffect(() => {
     if (inifinteLoding) return;
     if (inView) {
-      console.log("inview");
       setInfineLoading(true);
       setTimeout(() => {
         setVisibleCount((prev) => prev + 5);
