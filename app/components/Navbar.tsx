@@ -15,7 +15,7 @@ function Navbar() {
           Dashboard
         </Link>
         <Link href={"/fake-fetch"} className="underline hover:text-blue-500">
-          fake
+          fake retry
         </Link>
       </div>
     </div>

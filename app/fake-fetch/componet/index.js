@@ -28,7 +28,8 @@ export default function FakeComponent() {
     <div className="p-5">
       <h2>
         Simulating fake fetch in case it fails and how to handle erros loding
-        retires and all.
+        retires and all. see console it would shoing retries and eventualy fail
+        after 3 times.
       </h2>
       <div className="data mt-5">
         {isLoading ? (

@@ -21,9 +21,9 @@ function StockWithPrice() {
     queryFn: fetchCoins,
     refetchInterval: 10000,
     staleTime: 10000,
-    refetchIntervalInBackground: false, // 🚫 no background polling
+    refetchIntervalInBackground: false,
   });
-  const [visibleCount, setVisibleCount] = useState(5);
+  const [visibleCount, setVisibleCount] = useState(10);
   const [inifinteLoding, setInfineLoading] = useState(false);
   const { ref, inView } = useInView();
   const [sortBy, setSortBy] = useState("market_cap");
@@ -54,7 +54,7 @@ function StockWithPrice() {
     if (inView) {
       setInfineLoading(true);
       setTimeout(() => {
-        setVisibleCount((prev) => prev + 5);
+        setVisibleCount((prev) => prev + 10);
         setInfineLoading(false);
       }, 2000);
     }
